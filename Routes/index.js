@@ -1,7 +1,7 @@
 import React from 'react';
 
 import { NativeRouter, Routes, Route } from 'react-router-native';
-import HomePage from '../src/pages/Home';
+import HomePage from '../src/pages/Home/index';
 
 const RoutesComponent = () => {
   return(
