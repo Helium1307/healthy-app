@@ -3,6 +3,8 @@ import { Text, View, StyleSheet  } from 'react-native';
 
 import ScrollContainer from '../UI/ScrollContainer';
 import ButtonCalc from '../UI/ButtonCalc';
+import TabOptions from '../UI/TabOptions';
+import InfoCard from '../UI/infoCard';
 
 const Home = (props) => {
   return(
@@ -27,6 +29,20 @@ const Home = (props) => {
           </ScrollContainer>
         </View>
       </View>
+      
+      <View style={styles.tabOptionsContainer}>
+        <TabOptions />
+      </View>
+        
+      <ScrollContainer
+        style={styles.scrollView}
+        showsHorizontalScrollIndicator={false}
+        horizontal={true}
+      >
+        <InfoCard/>
+        <InfoCard/>
+        <InfoCard/>
+      </ScrollContainer>
     </View>
       
     
@@ -50,11 +66,18 @@ const styles = StyleSheet.create({
   scrollViewContainer: {
     width: '100%',
     height: 90,
+
+    marginBottom: 30,
   },
   header: {
     paddingTop: 35,
     padding: 20,
     alignItems: 'center',
+  },
+
+  tabOptionsContainer: {
+    height: 45,
+    padding: 3,
   }
   
 });
